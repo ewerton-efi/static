@@ -1,0 +1,2 @@
+# static
+Diretório de teste
