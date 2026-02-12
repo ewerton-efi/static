@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" class="sr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
+    <script rel="preload" src="https://unpkg.com/scrollreveal"></script>
+    <script rel="preload" src=" js/script.js"></script>
+  </head>
+
+  <body class="text-base xl:text-xl">
+    
+    <header class="on-show d-005 z-10 fixed w-full h-auto px-8 lg:px-[4.688rem] py-4 bg-linear-to-b ">
+
+      <nav class="w-full h-auto inline-flex flex-row items-center justify-between">
+        <div class="on-show d-010 w-fit">
+          <svg class="h-10 w-26.25">
+            <image class="h-10 w-auto grayscale transition-[filter] hover:grayscale-0" xlink:href="./media/ilustra-brand-efi-bank-h.svg?color=white" src="./media/ilustra-brand-efi-bank-h.svg" />
+          </svg>
+        </div>
+        <div class="absolute lg:relative invisible lg:visible">
+          <ul class="on-show inline-flex gap-8 w-fit h-fit">
+            <li class="i-020"><a href="#inicio">Soluções</a></li>
+            <li class="i-020"><a href="#sobre">Parcerias</a></li>
+            <li class="i-020"><a href="#contato">Desenvolvedores</a></li>
+            <li class="i-020"><a href="#contato">Tarifas</a></li>
+            <li class="i-020"><a href="#contato">Blog</a></li>
+          </ul>
+        </div>
+
+
+        <div class="on-show absolute lg:relative invisible lg:visible inline-flex gap-6">
+          <button class="i-020 btn btn-md w-fit md:w-fit">Abra sua conta grátis</Button>
+          <button class="i-020 btn btn-md w-fit md:w-fit">Acessar minha conta</Button>
+
+        </div>
+        <button id="theme-toggle" class="on-show i-020 btn size-48 bg-transparent border-0 border-button-state-stroke hover:bg-elevation-5 active:bg-button-state-pressed rounded-sm text-button-label">
+          <svg id="dark" class="absolute w-5 h-auto btn-icon-fill" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 7.5c1.375 0 2.5 1.125 2.5 2.5s-1.125 2.5-2.5 2.5A2.507 2.507 0 0 1 7.5 10c0-1.375 1.125-2.5 2.5-2.5m0-1.667A4.17 4.17 0 0 0 5.833 10c0 2.3 1.867 4.167 4.167 4.167S14.167 12.3 14.167 10 12.3 5.833 10 5.833m-8.333 5h1.666A.836.836 0 0 0 4.167 10a.836.836 0 0 0-.834-.833H1.667A.836.836 0 0 0 .833 10c0 .458.375.833.834.833m15 0h1.666a.836.836 0 0 0 .834-.833.836.836 0 0 0-.834-.833h-1.666a.836.836 0 0 0-.834.833c0 .458.375.833.834.833m-7.5-9.166v1.666c0 .459.375.834.833.834a.836.836 0 0 0 .833-.834V1.667A.836.836 0 0 0 10 .833a.836.836 0 0 0-.833.834m0 15v1.666c0 .459.375.834.833.834a.836.836 0 0 0 .833-.834v-1.666a.836.836 0 0 0-.833-.834.836.836 0 0 0-.833.834M4.992 3.817a.83.83 0 1 0-1.175 1.175l.883.883a.83.83 0 0 0 1.175 0c.317-.325.325-.858 0-1.175zM15.3 14.125a.83.83 0 1 0-1.175 1.175l.883.883a.83.83 0 1 0 1.175-1.175zm.883-9.133a.83.83 0 1 0-1.175-1.175l-.883.883a.83.83 0 0 0 0 1.175c.325.317.858.325 1.175 0zM5.875 15.3A.83.83 0 1 0 4.7 14.125l-.883.883a.83.83 0 0 0 0 1.175c.325.317.858.325 1.175 0z" />
+          </svg>
+          <svg id="light" class="w-5 h-auto btn-icon-fill" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.80833 4.59167C7.65833 5.125 7.58333 5.68333 7.58333 6.25C7.58333 9.65 10.35 12.4167 13.75 12.4167C14.3167 12.4167 14.875 12.3417 15.4083 12.1917C14.5417 14.325 12.4417 15.8333 10 15.8333C6.78333 15.8333 4.16667 13.2167 4.16667 10C4.16667 7.55833 5.675 5.45833 7.80833 4.59167ZM10 2.5C5.85833 2.5 2.5 5.85833 2.5 10C2.5 14.1417 5.85833 17.5 10 17.5C14.1417 17.5 17.5 14.1417 17.5 10C17.5 9.61667 17.4667 9.23333 17.4167 8.86667C16.6 10.0083 15.2667 10.75 13.75 10.75C11.2667 10.75 9.25 8.73333 9.25 6.25C9.25 4.74167 9.99167 3.4 11.1333 2.58333C10.7667 2.53333 10.3833 2.5 10 2.5Z" />
+          </svg>
+
+        </button>
+      </nav>
+    </header>
+
+    <main class="on-show">
+      <!-- hero -->
+      <section id="hero" class="no-padding overflow-clip">
+        <div class="@container">
+
+          <picture class="i-020 z-0 w-full h-fit">
+            <source srcset="./media/img-hero-mobile.webp" media="(max-width: 360px)">
+            <source srcset="./media/img-hero-tablet.webp" media="(max-width: 760px)">
+            <source srcset="./media/img-hero-laptop.webp" media="(max-width: 1320px)">
+            <source srcset="./media/img-hero-desktop.webp" media="(max-width: 1896px)">
+            <img class="w-full h-auto" src="./media/img-hero-laptop.webp" alt="Boleto Automático">
+          </picture>
+
+          <!--
+          <img class="w-full h-auto" srcset="
+            ./media/img-hero-mobile.webp 360w,
+            ./media/img-hero-tablet.webp 760w,
+            ./media/img-hero-laptop.webp 1320w,
+            ./media/img-hero-desktop.webp 1896w
+            " alt="Boleto Automático">
+        -->
+          <div class="p-section absolute w-full h-full max-h-9/10 md:max-h-8/10 lg:max-h-7/10 xl:max-h-8/10 top-0 left-0 gap-0 md:gap-9 items-end grid grid-cols-1 md:grid-cols-2 content-center">
+
+            <!-- coluna 1-->
+            <div class="w-full h-fit">
+              <div class="i-020 i-020 bg-gray-900 w-fit tracking-wider text-white text-base xl:text-lg px-3 py-1 rounded-sm">
+                Novidade
+              </div>
+              <h1 class="i-020 d-100 h2 font-bold text-2xl md:text-5xl lg:text-9xl pb-2 pt-2">
+                Bolix Automático</h1>
+              <p class="i-020 d-120 text-white font-normal text-lg xl:text-2xl pb-6 max-w-80">A inovação do Pix Automático chegou ao boleto recorrente!</p>
+              <button class="i-020 d-150 btn btn-lg text-xl px-8 py-5 w-full md:w-fit rounded-2xl">Quero
+                experimentar <svg class="object-center h-6 w-6 ml-3 sm:hidden md:inline" width="24" height="24">
+                  <image xlink:href="./media/ic-arrow-right-solid.svg" src="./media/ic-arrow-right-solid.svg" width="24" height="24" />
+                </svg>
+                <span class="relative flex size-3">
+                  <span class="absolute top-0 -right-2 inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+                  <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+                </span>
+              </button>
+
+            </div>
+            <!-- coluna 2 -->
+            <div class="w-full"></div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- Dobra 2-->
+      <section id="formas-pagamento" class="i-020 p-section">
+        <div class=" @container">
+          <div class="flex flex-cols-2 flex-wrap-reverse md:flex-nowrap gap-8">
+            <!-- col texto -->
+            <div class="w-full flex flex-col gap-6">
+              <h2 class="i-020 font-light text-4xl xl:text-8xl">Uma cobrança, <br /><strong class="high">três formas de pagar</strong></h2>
+              <p class="i-020">O <strong>Pix Automático</strong>, disponível nas <strong>cobranças por Assinatura</strong> do Efí Bank, <strong>combina código de barras, QR Code Pix e Pix Automático</strong> em uma única cobrança.</p>
+
+              <button class="i-020 btn-md bg-button-state-default hover:bg-button-state-hovered active:bg-button-state-pressed text-button-label font-bold text-base xl:text-xl tracking-050 px-5 py-4 w-full md:w-fit rounded-sm">Abrir conta PJ grátis <svg class="object-center h-6 w-6 ml-3" width="24" height="24">
+                  <image xlink:href="./media/ic-arrow-right-solid.svg" src="./media/ic-arrow-right-solid.svg" width="24" height="24" />
+                </svg>
+              </button>
+
+            </div>
+            <!-- col image -->
+            <div class="i-020 w-full flex sm:order-1">
+              <picture>
+                <source srcset="./media/img-boleto-mobile.webp" media="(max-width: 360px)">
+                <source srcset="./media/img-boleto-tablet.webp" media="(max-width: 992px)">
+                <source srcset="./media/img-boleto-desktop.webp" media="(max-width: 1920px)">
+                <source srcset="./media/img-boleto-laptop.webp">
+                <img class="w-full h-auto" src="./media/img-boleto-laptop.webp" alt="Flowers">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <!-- CARDS 3-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mt-12">
+
+          <div class="i-020 basis-1/2 lg:flex-cols-4 ">
+            <img class="w-20 xl:w-32" src="./media/ilustra-pagamento-identificado.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Melhor experiência para o cliente
+            </h3>
+            <p>Uma experiência de pagamento que fideliza, sem exigir ação manual do pagador todos os meses.</p>
+          </div>
+
+          <div class="i-020 basis-1/2 lg:basis-1/4 xl:basis-1/4 lg:flex-cols-4 gap-4">
+            <img class="w-20 xl:w-32" src="./media/ilustra-suporte-tecnico.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Sem risco de duplicidade
+            </h3>
+            <p>
+              O primeiro pagamento confirmado invalida os demais, evitando qualquer risco de duplicidade.
+            </p>
+          </div>
+
+          <div class="i-020 basis-1/2 lg:basis-1/4 xl:basis-1/4 lg:flex-cols-4 gap-4">
+            <img class="w-20 xl:w-32" src="./media/ilustra-app-outros-negocios.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Menos inadimplência
+            </h3>
+            <p>
+              Com uma única autorização, o pagamento deixa de depender da memória do pagador e passa aser debitado automaticamente, no dia do vencimento
+            </p>
+          </div>
+
+          <div class="i-020 basis-1/2 lg:basis-1/4 xl:basis-1/4 lg:flex-cols-4 gap-4">
+            <img class="w-20 xl:w-32" src="./media/ilustra-boleto-05.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Juros e multas preservados
+            </h3>
+            <p>
+              Se o Pix Automático não for concluído, o código de barras e o QR Code Pix seguem disponíveis, inclusive após o vencimento, com encargos aplicados.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Dobra 3-->
+      <!-- O futuro das assinaturas Section -->
+      <section id="section-pix-automatico" class="i-020 p-section elevation-1" data-name="section">
+        <div class="@container">
+          <div class="w-full gap-0 grid grid-cols-1 lg:grid-cols-2">
+            <!-- coluna 1 -->
+            <div class="card w-full h-fit elevation-3 rounded-t-xxl lg:rounded-xxl px-8 lg:pl-20 lg:pr-28 pt-20 pb-8 lg:pb-20">
+              <div class="i-020 w-full h-fit -mt-40 lg:-mt-10 lg:relative ml-8 lg:ml-96">
+                <picture>
+                  <source srcset=" ./media/img-pix-automatico-mobile.webp" media="(max-width: 240px)">
+                  <source srcset="./media/img-pix-automatico-tablet.webp" media="(max-width: 240px)">
+                  <source srcset="./media/img-pix-automatico-desktop.webp" media="(max-width: 360px)">
+                  <source srcset="./media/img-pix-automatico-laptop.webp" media="(max-width: 336px)">
+                  <img class="lg:absolute lg:-top-40 lg:right-12 size-[15rem] lg:size-84 transform hover:scale-105 transition-transform" src="./media/img-pix-automatico-laptop.webp" alt="Pix Automático">
+                </picture>
+              </div>
+              <h2 class="i-020 font-light text-4xl xl:text-8xl leading-tight lg:mt-0 pb-6">
+                O futuro das <br />assinaturas, <b class="high">hoje</b>
+              </h2>
+
+              <p class="i-020 pb-4">
+                Disponível para cobranças de planos: <b>semanais, mensais, trimestrais, semestrais e anuais</b>, o Bolix Automático entrega uma experiência moderna, confiável e sem atrito para o cliente.
+              </p>
+
+              <ol class="list-decimal medium space-y-4 pl-8">
+                <li class="i-020 ">
+                  Sua empresa habilita o <b class="high">Bolix Automático</b> na conta PJ
+                </li>
+                <li class="i-020 ">
+                  A assinatura passa a exibir o QR Code com <b class="high">opção de ativação do Pix Automático</b>
+                </li>
+                <li class="i-020 ">
+                  O cliente <b class="high">paga e recebe a oferta</b> para ativar o Pix Automático
+                </li>
+                <li class="i-020 ">
+                  Aceitou? As próximas cobranças são <b class="high">debitadas automaticamente</b>
+                </li>
+                <li class="i-020 ">
+                  Não aceitou? Ele continua pagando via <b class="high">código de barras ou QR Code Pix</b>
+                </li>
+                <li class="i-020 ">
+                  O primeiro pagamento invalida os demais, <b class="high">sem risco de duplicidade</b>
+                </li>
+              </ol>
+            </div>
+            <!-- coluna 2-->
+            <div class="px-8 pb-8 elevation-3 lg:bg-transparent rounded-b-xxl">
+              <!-- YouTube Video Mockup -->
+              <div class="w-full lg:w-2xl xl:w-4xl h-fit border-8 mt-0 lg:mt-50 xl:mt-50 ml-0 lg:-ml-24 border-elevation-5 rounded-3xl overflow-hidden">
+                <iframe class="aspect-video w-full md:w-full" src="https://www.youtube.com/embed/w3-1KYU54eI?si=6yZrFK5eAr14se3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Dobra 4-->
+      <section class="i-020 p-section elevation-4">
+        <div class="@container">
+          <h2 class="text-4xl xl:text-8xl">Dobra <b class="high">4</b></h2>
+        </div>
+      </section>
+
+      <!-- Dobra 5-->
+      <section id="negocios" class="i-020 p-section elevation-3">
+        <div class="@container">
+          <div class="flex flex-cols-2 flex-wrap-reverse md:flex-nowrap gap-8">
+            <!-- col texto -->
+            <div class="w-full flex flex-col gap-6">
+              <h2 class="text-4xl xl:text-8xl"><b class="high">Feito para negócios </b><br />que vivem de recorrência</h2>
+              <p class="text-body shrink"><b>Quem trabalha com mensalidade sabe:</b> atrasos e inadimplência impactam o caixa, o planejamento e a relação com os clientes. O Bolix Automático nasceu para resolver isso.</p>
+              <button class="btn btn-md">Emitir Bolix Automático<svg class="hidden md:block object-center h-6 w-6 ml-3" width="24" height="24">
+                  <image xlink:href="./media/ic-arrow-right-solid.svg" src="./media/ic-arrow-right-solid.svg" width="24" height="24" />
+                </svg>
+              </button>
+              <button class="btn btn-lg w-full md:w-fit">Emitir Bolix Automático<svg class="hidden md:block object-center h-6 w-6 ml-3" width="24" height="24">
+                  <image xlink:href="./media/ic-arrow-right-solid.svg" src="./media/ic-arrow-right-solid.svg" width="24" height="24" />
+                </svg>
+              </button>
+            </div>
+            <!-- col image -->
+            <div class="w-full flex sm:order-1">
+              <picture>
+                <source srcset="./media/img-negocios-mobile.webp" media="(max-width: 360px)">
+                <source srcset="./media/img-negocios-tablet.webp" media="(max-width: 992px)">
+                <source srcset="./media/img-negocios-desktop.webp" media="(max-width: 1920px)">
+                <source srcset="./media/img-negocios-laptop.webp">
+                <img class="w-full h-auto" src="./media/img-boleto-laptop.webp" alt="Flowers">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <!-- CARDS 3-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mt-12">
+
+          <div class="">
+            <img class="w-20 xl:w-32 mb-4" src="./media/ilustra-educacao.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Escolas, cursos e universidades</h3>
+            <p>Que precisam de mensalidades pagas em dia e menos cobrança em cima dos pais e responsáveis.</p>
+          </div>
+
+          <div class="">
+            <img class="w-20 xl:w-32 mb-4" src="./media/ilustra-wireless-1.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Provedores de internet (ISPs)</h3>
+            <p>Que querem garantir conexão ativa e planos pagos sem atrasos.</p>
+          </div>
+
+          <div class="">
+            <img class="w-20 xl:w-32 mb-4" src="./media/ilustra-webinar.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Empresas SaaS e clubes de assinatura
+            </h3>
+            <p>Que buscam escalabilidade, previsibilidade de receita e menos problemas na hora de renovar.</p>
+          </div>
+
+          <div class="">
+            <img class="w-20 xl:w-32 mb-4" src="./media/ilustra-cliente-empresario.svg" alt="">
+            <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl py-4">
+              Prestadores de serviço e profissionais autônomos
+            </h3>
+            <p>Que não podem depender da “lembrança” do cliente para receber.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- dobra 6-->
+      <section id="social" class="i-020 p-section elevation-2">
+        <div class="@container flex flex-cols-2 flex-wrap-reverse md:flex-nowrap gap-8">
+          <!-- col texto -->
+          <div class="w-full flex flex-col gap-6">
+            <h2 class="text-xl lg:text-4xl xl:text-8xl">
+              Há 18 anos <b class="high">simplificando a gestão financeira</b> de quem empreende
+            </h2>
+            <!-- CARDS 3-->
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-8 mt-12 space-y-8">
+
+              <div class="">
+                <img class="w-20 xl:w-32 pb-4 lg:pb-8" src="./media/ilustra-banco-bank-security.svg" alt="">
+                <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl">364</h3>
+                <p class="medium">é o nosso código bancário</p>
+              </div>
+              <div class="">
+                <img class="w-20 xl:w-32 pb-4 lg:pb-8" src="./media/ilustra-seguranca-clientes.svg" alt="">
+                <p class="medium">Temos mais de</p>
+                <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl">700 <b class="high">mil</b></h3>
+                <p class="medium">clientes</p>
+              </div>
+              <div class="">
+                <img class="w-20 xl:w-32 pb-4 lg:pb-8" src="./media/ilustra-banco-money-01.svg" alt="">
+                <p class="medium">Mais de</p>
+                <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl">R$ 57 <b class="high">bilhões</b></h3>
+                <p class="medium">movimentados passam pelo Efí Bank</p>
+              </div>
+              <div class="">
+                <img class="w-20 xl:w-32 pb-4 lg:pb-8" src="./media/ilustra-dev-server-01.svg" alt="">
+                <p class="medium">Mais de</p>
+                <h3 class="text-base md:text-xl lg:text-2xl xl:text-3xl">6 <b class="high">bilhões</b></h3>
+                <p class="medium">de requisições nos endpoints em 2024</p>
+              </div>
+
+            </div>
+          </div>
+          <!-- col image -->
+          <div class="w-full flex sm:order-1">
+            <picture>
+              <source srcset="./media/img-colaboradores-mobile.webp" media="(max-width: 360px)">
+              <source srcset="./media/img-colaboradores-tablet.webp" media="(max-width: 992px)">
+              <source srcset="./media/img-colaboradores-desktop.webp" media="(max-width: 1920px)">
+              <source srcset="./media/img-colaboradores-laptop.webp">
+              <img class="w-full h-auto" src="./media/img-colaboradores-laptop.webp" alt="Flowers">
+            </picture>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FAQ Section -->
+      <section id="faq" class="i-020 p-section elevation-1">
+        <div class="@container elevation-2 mx-auto rounded-[3rem] rounded-tr-[3rem] w-full h-auto py-20 px-8 md:px-32 lg:px-24 xl:px-40 ">
+          <h2 class="high font-bold text-4xl md:text-5xl lg:text-6xl pb-4">
+            <span class="text-highlight">Dúvidas frequentes</span> sobre o Efi Bank
+          </h2>
+          <p class="medium pb-12">
+            Ainda tem dúvidas sobre o Bolix Automático? O Efi explica todos os detalhes sobre a nova forma de receber pagamentos no Brasil.
+          </p>
+
+          <div class="space-y-6 medium">
+            <!-- FAQ Item 1 -->
+            <details class="group rounded-md overflow-hidden">
+              <summary class="faq flex items-center justify-between cursor-pointer py-4 px-6 lg:py-6 lg:px-8 transition-colors">
+                <span class="font-bold">Quais são as linguagens de programação?</span>
+                <svg class="btn-icon-fill btn-icon-stroke w-6 h-6 text-medium transform group-open:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <div class="faq-content py-4 px-6 lg:py-6 lg:px-8 border-t border-button-state-disabled">
+                <p class="medium">Você pode desenvolver seu projeto integrado com nossa API em qualquer linguagem de programação.</p>
+              </div>
+            </details>
+
+            <!-- FAQ Item 2 -->
+            <details class="group rounded-md overflow-hidden">
+              <summary class="faq flex items-center justify-between cursor-pointer py-4 px-6 lg:py-6 lg:px-8 transition-colors">
+                <span class="font-bold">Quais as SDKs disponíveis?</span>
+                <svg class="btn-icon-fill btn-icon-stroke w-6 h-6 text-medium transform group-open:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <div class="faq-content py-4 px-6 space-y-2 lg:py-6 lg:px-8 border-t border-button-state-disabled">
+                <p class="medium">Disponibilizamos SDKs em diversas linguagens de programação:
+                <ul class="list-disc list-inside low">
+                  <li><a class="flex-inline">PHP</a></li>
+                  <li>NodeJS</li>
+                  <li>Ruby</li>
+                  <li>Python</li>
+                  <li>.NET Core</li>
+                  <li>Java</li>
+                  <li>Delphi</li>
+                  <li>Go</li>
+                  <li>TypeScript</li>
+                  <li>Flutter</li>
+                  <li>Android</li>
+                </ul>
+                </p>
+              </div>
+            </details>
+
+            <!-- FAQ Item 3 -->
+            <details class="group rounded-md overflow-hidden">
+              <summary class="faq flex items-center justify-between cursor-pointer py-4 px-6 lg:py-6 lg:px-8 transition-colors">
+                <span class="font-bold">Quais são as linguagens de programação?</span>
+                <svg class="btn-icon-fill btn-icon-stroke w-6 h-6 text-medium transform group-open:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <div class="faq-content py-4 px-6 lg:py-6 lg:px-8 border-t border-button-state-disabled">
+                <p class="medium">Você pode desenvolver seu projeto integrado com nossa API em qualquer linguagem de programação.</p>
+              </div>
+            </details>
+
+            <!-- FAQ Item 4 -->
+            <details class="group rounded-md overflow-hidden">
+              <summary class="faq flex items-center justify-between cursor-pointer py-4 px-6 lg:py-6 lg:px-8 transition-colors">
+                <span class="font-bold">Quais são as linguagens de programação?</span>
+                <svg class="btn-icon-fill btn-icon-stroke w-6 h-6 text-medium transform group-open:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <div class="faq-content py-4 px-6 lg:py-6 lg:px-8 border-t border-button-state-disabled">
+                <p class="medium">Você pode desenvolver seu projeto integrado com nossa API em qualquer linguagem de programação.</p>
+              </div>
+            </details>
+
+            <!-- FAQ Item 5 -->
+            <details class="group rounded-md overflow-hidden">
+              <summary class="faq flex items-center justify-between cursor-pointer py-4 px-6 lg:py-6 lg:px-8 transition-colors">
+                <span class="font-bold">Quais são as linguagens de programação?</span>
+                <svg class="btn-icon-fill btn-icon-stroke w-6 h-6 text-medium transform group-open:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <div class="faq-content py-4 px-6 lg:py-6 lg:px-8 border-t border-button-state-disabled">
+                <p class="medium">Você pode desenvolver seu projeto integrado com nossa API em qualquer linguagem de programação.</p>
+              </div>
+            </details>
+
+            <!-- FAQ Item 6 -->
+            <details class="group rounded-md overflow-hidden">
+              <summary class="faq flex items-center justify-between cursor-pointer py-4 px-6 lg:py-6 lg:px-8 transition-colors">
+                <span class="font-bold">Quais são as linguagens de programação?</span>
+                <svg class="btn-icon-fill btn-icon-stroke w-6 h-6 text-medium transform group-open:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </summary>
+              <div class="faq-content py-4 px-6 lg:py-6 lg:px-8 border-t border-button-state-disabled">
+                <p class="medium">Você pode desenvolver seu projeto integrado com nossa API em qualquer linguagem de programação.</p>
+              </div>
+            </details>
+
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer id="footer" class="on-show i-020 elevation-1 w-full h-fit px-8 py-10 lg:px-[4.688rem] lg:py-20 text-lg">
+      <div class="@container">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <ul class="list-none space-y-4 basis-full md:basis-1/4">
+            <li><img class="w-52 md:w-60 mb-8" src="./media/ilustra-brand-efi-bank-h.svg" alt="Efí Bank"></li>
+            <li>
+              <a class="py-2" href="#">Sobre o Efí Bank</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Trabalhe conosco</a>
+            </li>
+          </ul>
+          <ul class="list-none space-y-4 basis-full md:basis-1/4">
+            <li class="text-xl pb-2 b-2 border-b-2 border-border-b-2 border-elevation-5 font-bold high">Ajuda
+            </li>
+            <li>
+              <a class="py-2" href="#">Central de ajuda</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Documentação APIs</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Renegociar Cartão Efí Bank</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Canal de denúncias</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Ouvidoria</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Segurança</a>
+            </li>
+          </ul>
+
+          <ul class="list-none space-y-4 basis-full md:basis-1/4">
+            <li class="text-xl pb-2 b-2 border-b-2 border-border-b-2 border-elevation-5 font-bold high">
+              Transparência
+            </li>
+            <li>
+              <a class="py-2" href="#">Termos e contratos</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Política de privacidade</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Governança corporativa</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Transparência salarial</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Preferências de cookies</a>
+            </li>
+          </ul>
+
+          <ul class="list-none space-y-4 basis-full md:basis-1/4">
+            <li class="text-xl pb-2 b-2 border-b-2 border-border-b-2 border-elevation-5 font-bold high">
+              Utilidades
+            </li>
+            <li>
+              <a class="py-2" href="#">Fale conosco</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Imprensa</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Status do sistema</a>
+            </li>
+            <li>
+              <a class="py-2" href="#">Cotação do dolar</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-xl pb-2 pt-4 border-b-2 border-border-b-2 border-elevation-5 font-bold high mb-4">Atendimento 360º</div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-1 basis-full md:basis-2/4">
+            <p class="medium font-bold">O Efí Bank nunca liga para você por esses números.</p>
+            <p class="">Estes telefones são apenas para que você entre em contato com a gente. Também não pedimos dados pessoais, senhas, dados do cartão ou códigos de transação por telefone.</p>
+            <p class="medium font-bold mt-4">Mantenha-se seguro(a)!</p>
+            <p class="mt-4">*Exclusivo para atendimento via texto.</p>
+            <p class="mt-4">**A ouvidoria Efí funciona das 09h às 11h e das 13h às 16h, de segunda a sexta-feira, de acordo com o horário de Brasília, exceto em feriados nacionais.</p>
+          </div>
+
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+
+            <div class="basis-full md:basis-1/4">
+              <p class="text-sm">E-mail</p>
+              <a class="pb-2" href="#">atendimento@sejaefi.com.br</a>
+              <p class="text-sm mt-4">Capitais e regiões metropolitanas:</p>
+              <a class="pb-2" href="#">4000 1234</a>
+              <p class="text-sm mt-4">São Paulo e região:</p>
+              <a class="pb-2" href="#">(11) 2394 2208</a>
+            </div>
+
+            <div class="basis-full md:basis-1/4">
+              <p class="text-sm">Ligações originadas de telefone fixo:</p>
+              <a class="pb-2" href="#">0800 941 2343</a>
+              <p class="text-sm mt-4">Whatsapp*:</p>
+              <a class="pb-2" href="#">(31) 3603 0822</a>
+              <p class="text-sm mt-4">Ouvidoria**:</p>
+              <a class="pb-2" href="#">0800 940 0361</a>
+              <p class="text-sm mt-4 mb-2">Atendimento online:</p>
+              <button class="btn-md bg-button-state-default hover:bg-button-state-hovered active:bg-button-state-pressed text-button-label font-bold text-base xl:text-xl tracking-050 px-5 py-4 w-full md:w-fit rounded-sm">Falar com o time comercial
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns-1 md:columns-2  gap-8 mt-16 pb-24 border-b-2 border-border-b-2 border-elevation-5">
+
+          <div class="w-fit basis-full pb-6">
+            <div class="text-xl pb-2 pt-4 font-bold high mb-4">Baixe o app:</div>
+            <div class="flex flex-row gap-4">
+              <img class="h-12 xl:h-16" src="./media/ilustra-app-store.svg">
+              <img class="h-12 xl:h-16" src="./media/ilustra-google-play.svg">
+            </div>
+          </div>
+
+          <div class="w-fit flex lg:pl-16 items-center justify-center gap-4 3">
+            <a href="#">
+              <img class="h-16 xl:h-20 w-auto" src="./media/ilustra-brand-reclame-aqui-ra1000.svg">
+            </a>
+            <a href="#">
+              <img class="w-32 h-auto" src="./media/img-brand-gptw.webp">
+            </a>
+            <a href="#">
+              <img class="w-32 h-auto" src="./media/ilustra-brand-pci-dss.svg">
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap-reverse flex-col md:flex-row items-center mt-8 gap-8">
+          <div class="grow space-y-2 text-base mb-2">
+            <p>© 2007-2026 • Efí - Instituição de Pagamento. Todos os direitos reservados.<br />Efí S.A. CNPJ: 09.089.356/0001-18</p>
+          </div>
+          <div class="w-fit flex grow-0 flex-initial flex-wrap gap-4 justify-center-safe">
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed text-button-label rounded-pill">
+              <img class="w-5 h-auto" src="./media/ic-youtube.svg" alt="Canal no Youtube">
+            </button>
+
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed text-button-label rounded-pill">
+              <img class="w-5 h-auto" src="./media/ic-instagram.svg" alt="Canal no Instagram">
+            </button>
+
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed text-button-label rounded-pill">
+              <img class="w-5 h-auto" src="./media/ic-tiktok.svg" alt="Canal no Tiktok">
+            </button>
+
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed text-button-label rounded-pill">
+              <img class="w-5 h-auto" src="./media/ic-spotify.svg" alt="Canal no Spotify">
+            </button>
+
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed text-button-label rounded-pill">
+              <img class="w-5 h-auto" src="./media/ic-facebook.svg" alt="Canal no Facebook">
+            </button>
+
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed rounded-pill text-button-label">
+              <svg class="w-5 h-auto fill-button-state-default" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.647 8.469 18.932 0h-1.726L10.88 7.353 5.827 0H0l7.64 11.12L0 20h1.726l6.68-7.765L13.743 20h5.828zm-2.365 2.748-.774-1.107-6.16-8.81H5l4.971 7.11.774 1.107 6.462 9.242h-2.652z" />
+              </svg>
+            </button>
+
+            <button class="size-40 bg-transparent border-2 border-transparent hover:bg-elevation-5 active:bg-button-state-pressed text-button-label rounded-pill">
+              <img class="w-5 h-auto" src="./media/ic-linkedin-solid.svg" alt="Canal no Linkedin">
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </footer>
+    
+    <script>
+
+      ScrollReveal().reveal('.d-000');
+      ScrollReveal().reveal('.d-005', { delay: 50 });
+      ScrollReveal().reveal('.d-010', { delay: 100 });
+      ScrollReveal().reveal('.d-020', { delay: 200 });
+      ScrollReveal().reveal('.d-030', { delay: 300 });
+      ScrollReveal().reveal('.d-040', { delay: 400 });
+      ScrollReveal().reveal('.i-050', { delay: 500 });
+      ScrollReveal().reveal('.d-060', { delay: 600 });
+      ScrollReveal().reveal('.d-070', { delay: 700 });
+      ScrollReveal().reveal('.d-080', { delay: 800 });
+      ScrollReveal().reveal('.d-090', { delay: 900 });
+      ScrollReveal().reveal('.d-100', { delay: 1000 });
+      ScrollReveal().reveal('.d-120', { delay: 1200 });
+      ScrollReveal().reveal('.d-150', { delay: 1500 });
+      ScrollReveal().reveal('.d-180', { delay: 1800 });
+      ScrollReveal().reveal('.d-200', { delay: 2000 });
+
+      ScrollReveal().reveal('.i-020', { interval: 200 });
+    </script>
+  </body>
+
+</html>
